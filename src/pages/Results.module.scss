@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+// 🎨 Theme Variables
+$light-green: #e6f4ea;
+$dark-teal: #154d57;
+$card-bg: #ffffff;
+$card-header-bg: #d8f8e1;
+$card-border: #c0eac6;
+$shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+
+$green: #27ae60;
+$red: #e74c3c;
+$gray: #888;
+$blue-light: #eaf3ff;
+
+// 🧾 Main Container
+.resultsSection {
+  font-family: 'Inter', sans-serif;
+  padding: 3rem 2rem;
+  background-color: $light-green;
+  min-height: 100vh;
+  border-radius: 16px;
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+// 📌 Heading Style
+.resultsHeading {
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-align: center;
+  color: $dark-teal;
+  margin-bottom: 2.5rem;
+  border-bottom: 2px solid $card-border;
+  padding-bottom: 0.5rem;
+}
+
+// 🧩 Card Style
+.card {
+  border: none;
+  background-color: $card-bg;
+  border-radius: 16px;
+  box-shadow: $shadow;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+
+  & + .card {
+    margin-top: 2rem;
+  }
+}
+
+// 🧷 Card Header
+.cardHeader {
+  background-color: $card-header-bg;
+  color: $dark-teal;
+  font-size: 1.6rem;
+  font-weight: 800;
+  text-align: center;
+  padding: 1.25rem;
+  border-bottom: 1px solid $card-border;
+  border-radius: 16px 16px 0 0;
+}
+
+// 🏷️ Legend Text
+.legend {
+  font-size: 0.9rem;
+  margin: 0.75rem 1rem;
+  color: $gray;
+  font-weight: 500;
+}
+
+// 📊 Highlight Labels
+.green {
+  color: $green;
+  font-weight: 700;
+  background-color: rgba(39, 174, 96, 0.12);
+  padding: 4px 8px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.red {
+  color: $red;
+  font-weight: 700;
+  background-color: rgba(231, 76, 60, 0.12);
+  padding: 4px 8px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.highlight-box {
+  border: 2px solid $card-border;
+  padding: 0.75rem;
+  border-radius: 12px;
+  background-color: $blue-light;
+  font-weight: 600;
+  color: $dark-teal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+// 📱 Responsive Tweaks
+@media (max-width: 768px) {
+  .resultsSection {
+    padding: 1.5rem 1rem;
+  }
+
+  .resultsHeading {
+    font-size: 1.75rem;
+  }
+
+  .cardHeader {
+    font-size: 1.2rem;
+  }
+
+  .legend {
+    font-size: 0.85rem;
+  }
+
+  .green,
+  .red {
+    font-size: 0.85rem;
+    padding: 3px 6px;
+  }
+
+  .highlight-box {
+    font-size: 0.9rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}
+
+// ✨ Fade In Animation
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

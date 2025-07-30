@@ -1,0 +1,80 @@
+{
+  "name": "react-distance-calculator",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://arturguimaraes.github.io/react-distance-calculator/",
+  "main": "index.js",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "dependencies": {
+    "@googlemaps/js-api-loader": "^1.14.3",
+    "@react-google-maps/api": "^2.20.7",
+    "@reduxjs/toolkit": "^1.8.5",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.11.58",
+    "@types/react": "^18.3.23",
+    "@types/react-dom": "^18.3.7",
+    "axios": "^1.9.0",
+    "bootstrap": "^5.2.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "fast-equals": "^4.0.3",
+    "gh-pages": "^6.3.0",
+    "jspdf": "^3.0.1",
+    "jspdf-autotable": "^5.0.2",
+    "lucide-react": "^0.516.0",
+    "mongoose": "^8.15.1",
+    "react": "^18.3.1",
+    "react-bootstrap": "^2.5.0",
+    "react-csv": "^2.2.2",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.5.0",
+    "react-redux": "^8.0.2",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "^5.0.1",
+    "sass": "^1.89.2",
+    "socket.io-client": "^4.8.1",
+    "typescript": "^4.9.5",
+    "uuid": "^9.0.0",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "@types/react-csv": "^1.1.10",
+    "@types/uuid": "^8.3.4",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.10"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

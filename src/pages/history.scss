@@ -1,0 +1,226 @@
+.history-container {
+  padding: 3rem 2rem;
+  background-color: #fdfaf7;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 16px;
+
+  // 🧭 Header
+  .history-header {
+    background-color: #e6f4ea;
+    padding: 1.5rem 1.25rem;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #2e2c29;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .export-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: #4f46e5;
+      color: #ffffff;
+      border: none;
+      padding: 0.65rem 1.3rem;
+      font-size: 1rem;
+      font-weight: 500;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      .icon {
+        font-size: 1.1rem;
+      }
+
+      &:hover {
+        background-color: #3730a3;
+        transform: scale(1.04);
+        box-shadow: 0 5px 14px rgba(79, 70, 229, 0.3);
+      }
+
+      &.pdf {
+        background-color: #10b981;
+
+        &:hover {
+          background-color: #059669;
+          box-shadow: 0 5px 14px rgba(16, 185, 129, 0.3);
+        }
+      }
+    }
+  }
+
+  // 🔍 Filters
+  .filters {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 14px;
+    box-shadow: 0 3px 16px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+
+    input {
+      padding: 0.7rem 1rem;
+      font-size: 1rem;
+      border: 1.5px solid #d1d5db;
+      border-radius: 10px;
+      flex: 1;
+      min-width: 200px;
+      background-color: #f9fafb;
+      transition: border-color 0.2s ease;
+
+      &:focus {
+        border-color: #4f46e5;
+        box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+        outline: none;
+        background-color: #ffffff;
+      }
+    }
+
+    button {
+      padding: 0.7rem 1.3rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.3s ease;
+
+      svg {
+        margin-bottom: 1px;
+      }
+
+      &:hover {
+        transform: scale(1.04);
+      }
+
+      &:first-of-type {
+        background-color: #4f46e5;
+        color: #ffffff;
+
+        &:hover {
+          background-color: #3730a3;
+        }
+      }
+
+      &.reset-btn {
+        background-color: #ef4444;
+        color: #ffffff;
+
+        &:hover {
+          background-color: #dc2626;
+        }
+      }
+    }
+  }
+
+  // 🪵 No History
+  .no-history {
+    text-align: center;
+    padding: 2rem;
+    background-color: #fff8f0;
+    font-size: 1.1rem;
+    color: #6b6b6b;
+    border-radius: 12px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.03);
+  }
+
+  // 📊 Table
+  .table-wrapper {
+    overflow-x: auto;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+  }
+
+  .history-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+
+    th,
+    td {
+      padding: 1rem 1.25rem;
+      text-align: left;
+      border-bottom: 1px solid #e5e7eb;
+      font-size: 0.95rem;
+    }
+
+    th {
+      background-color: #e3eaf2;
+      font-weight: 600;
+      color: #2c3e50;
+
+      .icon {
+        margin-right: 0.4rem;
+        color: #6b7280;
+      }
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f9fbfc;
+    }
+
+    tbody tr:hover {
+      background-color: #eef3f8;
+    }
+
+    td {
+      color: #444;
+    }
+  }
+
+  // 📱 Responsive
+  @media (max-width: 768px) {
+    .history-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .button-group {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    .export-btn {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .filters {
+      flex-direction: column;
+      align-items: stretch;
+
+      input,
+      button {
+        width: 100%;
+      }
+    }
+
+    .history-table {
+      font-size: 0.9rem;
+    }
+  }
+}

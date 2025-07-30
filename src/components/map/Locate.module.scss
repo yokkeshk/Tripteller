@@ -1,0 +1,38 @@
+.locate {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  background-color: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 50%;
+  padding: 0.6rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    font-size: 1.2rem;
+    color: #154d57;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    background-color: #f0f8f6;
+    border-color: #b2dfdb;
+
+    svg {
+      transform: scale(1.1);
+      color: #00796b;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(21, 77, 87, 0.2);
+  }
+}

@@ -1,0 +1,229 @@
+.admin-dashboard {
+  background-color: #f4f6f9;
+  padding: 3rem 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  h2 {
+    color: #2c3e50;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  // 🔍 FILTER PANEL
+  .filters-panel {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    margin-bottom: 2.5rem;
+    border: 1px solid #e0e6ed;
+
+    h5 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 1.5rem;
+    }
+
+    .filter-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .filter-field {
+      flex: 1 1 240px;
+
+      label {
+        display: block;
+        font-size: 0.95rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        color: #495057;
+      }
+
+      input {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        font-size: 0.95rem;
+        border: 1.5px solid #ccd6e0;
+        border-radius: 10px;
+        background-color: #f8fafc;
+        transition: all 0.3s ease-in-out;
+
+        &:focus {
+          border-color: #5e60ce;
+          outline: none;
+          background-color: #ffffff;
+          box-shadow: 0 0 0 3px rgba(94, 96, 206, 0.15);
+        }
+      }
+    }
+
+    .reset-btn {
+      margin-top: 1rem;
+
+      button {
+        background-color: #5e60ce;
+        border: none;
+        color: #ffffff;
+        font-weight: 600;
+        padding: 0.6rem 1.2rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+
+        &:hover {
+          background-color: #4749c5;
+        }
+      }
+    }
+  }
+
+  // 🧑 USER CARD
+  .user-card {
+    background-color: #ffffff;
+    border-radius: 14px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+
+    .card-header {
+      background: linear-gradient(to right, #e3f2fd, #f0f4f8);
+      padding: 1rem 1.5rem;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #2c3e50;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      border-bottom: 1px solid #dee2e6;
+
+      &:hover {
+        background-color: #d4e6f1;
+      }
+
+      button {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.9rem;
+        font-weight: 500;
+        background-color: #5e60ce;
+        color: #ffffff;
+        border: none;
+        border-radius: 6px;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+          background-color: #3f42b1;
+        }
+      }
+    }
+
+    .card-body {
+      padding: 1.5rem;
+
+      .download-buttons {
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
+        margin-bottom: 1rem;
+
+        .btn {
+          font-size: 0.85rem;
+          font-weight: 500;
+          padding: 0.5rem 1rem;
+          border-radius: 6px;
+          border: 1px solid #5e60ce;
+          background-color: transparent;
+          color: #5e60ce;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background-color: #5e60ce;
+            color: #ffffff;
+          }
+        }
+      }
+
+      .no-history {
+        font-style: italic;
+        color: #7f8c8d;
+        padding: 1rem 0;
+      }
+
+      table {
+        width: 100%;
+        margin-top: 1rem;
+        border-collapse: collapse;
+        border: 1px solid #dcdde1;
+        border-radius: 8px;
+        overflow: hidden;
+
+        thead {
+          background-color: #f6f8fa;
+
+          th {
+            padding: 0.85rem;
+            text-align: left;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #34495e;
+            border-bottom: 1px solid #e1e8ed;
+          }
+        }
+
+        tbody {
+          tr {
+            &:hover {
+              background-color: #f5f7fb;
+            }
+
+            td {
+              padding: 0.75rem;
+              font-size: 0.9rem;
+              color: #2c3e50;
+              border-bottom: 1px solid #ecf0f1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 📊 CSV & PDF Button
+  .btn-outline-primary {
+    font-size: 0.85rem;
+    padding: 0.5rem 1.1rem;
+    border-radius: 6px;
+    border: 1.5px solid #5e60ce;
+    color: #5e60ce;
+    background-color: #ffffff;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #5e60ce;
+      color: #ffffff;
+    }
+  }
+
+  // 📱 Responsive adjustments
+  @media (max-width: 768px) {
+    .filter-group {
+      flex-direction: column;
+    }
+
+    .download-buttons {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .card-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
+}

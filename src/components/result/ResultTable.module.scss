@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+// 🎨 Color Variables
+$light-blue-bg: #f0f8ff;
+$blue-header: #5ba4cf;
+$blue-row-alt: #e6f2fb;
+$blue-hover: #d0eafc;
+$border-color: #d4e4ef;
+$text-dark: #154d57;
+
+$green-bg: rgba(46, 204, 113, 0.2);
+$red-bg: rgba(231, 76, 60, 0.2);
+
+// 🧾 Table Container
+.tableContainer {
+  max-height: 500px;
+  overflow: auto;
+  background-color: $light-blue-bg;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  font-family: 'Inter', sans-serif;
+  margin-top: 1rem;
+}
+
+// 🏷️ Title
+.table-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: $text-dark;
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+// 📊 Table
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; // Ensures good spacing on desktop
+}
+
+.table thead {
+  background-color: $blue-header;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+.table th,
+.table td {
+  padding: 0.85rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid $border-color;
+  font-size: 0.95rem;
+  vertical-align: middle;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: $blue-row-alt;
+}
+
+.table tbody tr:hover {
+  background-color: $blue-hover;
+  transition: background-color 0.3s ease;
+}
+
+// ✅ Color Coded Rows
+.green {
+  background-color: $green-bg !important;
+  font-weight: 600;
+  color: #219653;
+}
+
+.red {
+  background-color: $red-bg !important;
+  font-weight: 600;
+  color: #c0392b;
+}
+
+// 📱 Responsive
+@media screen and (max-width: 768px) {
+  .tableContainer {
+    padding: 1rem;
+  }
+
+  .table-title {
+    font-size: 1.5rem;
+  }
+
+  .table {
+    font-size: 0.9rem;
+  }
+
+  .table th,
+  .table td {
+    padding: 0.6rem;
+  }
+}

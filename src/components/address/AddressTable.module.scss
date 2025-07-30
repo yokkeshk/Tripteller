@@ -1,0 +1,52 @@
+.tableContainer {
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  background-color: #ffffff;
+  padding: 1rem;
+
+  // Optional: Add scrollbars only when necessary
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f1f5f9; // Tailwind gray-300 on gray-100
+
+  &::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f5f9; // light gray
+    border-radius: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1; // muted gray
+    border-radius: 8px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+
+    th,
+    td {
+      padding: 0.75rem;
+      text-align: left;
+      border-bottom: 1px solid #e2e8f0; // light border
+      color: #334155; // dark gray text
+    }
+
+    th {
+      background-color: #f8fafc;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    tr:hover {
+      background-color: #f1f5f9;
+    }
+  }
+}

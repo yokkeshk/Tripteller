@@ -1,0 +1,135 @@
+// 🎨 Color Variables
+$form-accent: #d4edda;
+$form-accent-dark: #a3d9a5;
+$form-border: #c3e6cb;
+$light-green: #e6f4ea;
+$deep-green: #1b5e20;
+$mid-green: #2e7d32;
+$soft-green: rgba(46, 204, 113, 0.2);
+
+.formSection {
+  padding: 3rem 1.5rem;
+  background-color: $light-green;
+  min-height: 100vh;
+  border-radius: 16px;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  .container {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+
+    .title {
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      color: $mid-green;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border: 1px solid $form-border;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: box-shadow 0.3s ease;
+
+      &:hover {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      .cardHeader {
+        color: $deep-green;
+        background-color: $soft-green !important;
+        font-weight: 800;
+        font-size: 2rem;
+        text-align: center;
+        padding: 1.25rem 1.5rem;
+        border-bottom: 1px solid $form-border;
+      }
+
+      .cardBody {
+        background-color: #ffffff;
+        padding: 2rem;
+
+        .description {
+          font-size: 1rem;
+          color: #4b4b4b;
+          margin-bottom: 1.25rem;
+          line-height: 1.6;
+        }
+
+        .form-group {
+          margin-bottom: 1.5rem;
+
+          label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #2e7d32;
+          }
+
+          input,
+          select,
+          textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            font-size: 0.95rem;
+            border: 1.5px solid #b9dfc9;
+            border-radius: 10px;
+            background-color: #f9fdfb;
+            transition: border 0.3s, background 0.3s;
+
+            &:focus {
+              border-color: #81c784;
+              background-color: #ffffff;
+              outline: none;
+              box-shadow: 0 0 0 3px rgba(129, 199, 132, 0.15);
+            }
+          }
+        }
+
+        .btn-submit {
+          background-color: $mid-green;
+          color: #ffffff;
+          font-size: 1rem;
+          font-weight: 600;
+          padding: 0.75rem 1.5rem;
+          border: none;
+          border-radius: 10px;
+          transition: background-color 0.3s ease-in-out;
+          cursor: pointer;
+
+          &:hover {
+            background-color: darken($mid-green, 10%);
+          }
+        }
+      }
+    }
+  }
+}
+
+// 📱 Responsive
+@media (max-width: 768px) {
+  .formSection {
+    padding: 2rem 1rem;
+
+    .cardBody {
+      padding: 1.5rem !important;
+    }
+
+    .title {
+      font-size: 1.75rem;
+    }
+
+    .cardHeader {
+      font-size: 1.75rem !important;
+    }
+  }
+}

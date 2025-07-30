@@ -1,0 +1,75 @@
+// ✅ Table row highlights
+.green-row {
+  background-color: rgba(39, 174, 96, 0.12);
+  color: #154d57;
+  font-weight: 600;
+}
+
+.red-row {
+  background-color: rgba(231, 76, 60, 0.12);
+  color: #154d57;
+  font-weight: 600;
+}
+
+// ✅ Badge styles
+.green-badge {
+  background-color: rgba(39, 174, 96, 0.15);
+  color: #219653;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid rgba(39, 174, 96, 0.4);
+  font-size: 0.85rem;
+  display: inline-block;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: rgba(39, 174, 96, 0.25);
+    border-color: #219653;
+  }
+}
+
+.red-badge {
+  background-color: rgba(231, 76, 60, 0.15);
+  color: #e74c3c;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid rgba(231, 76, 60, 0.4);
+  font-size: 0.85rem;
+  display: inline-block;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: rgba(231, 76, 60, 0.25);
+    border-color: #e74c3c;
+  }
+}
+
+// ✅ SCSS-compliant row styles
+.green {
+  @extend .green-row;
+}
+
+.red {
+  @extend .red-row;
+}
+
+// ✅ Selected row highlight
+.selected {
+  background-color: #f2f8f4;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+// ✅ Styled checkbox for selection
+.select-box {
+  transform: scale(1.4);
+  cursor: pointer;
+  accent-color: #219653;
+  margin-right: 0.5rem;
+
+  &:hover {
+    filter: brightness(0.95);
+  }
+}

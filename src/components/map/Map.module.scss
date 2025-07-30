@@ -1,0 +1,24 @@
+.mapTitle {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 10;
+
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(4px);
+  color: #154d57;
+
+  padding: 0.5rem 0.9rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+
+  pointer-events: none; // ensures it doesn't block map interaction
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.7rem;
+  }
+}
